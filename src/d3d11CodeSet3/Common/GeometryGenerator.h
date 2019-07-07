@@ -23,7 +23,7 @@ public:
 	struct Vertex
 	{
 		Vertex(){}
-		Vertex(const XMFLOAT3& p, const XMFLOAT3& n, const XMFLOAT3& t, const XMFLOAT2& uv)
+		Vertex(const DirectX::XMFLOAT3& p, const DirectX::XMFLOAT3& n, const DirectX::XMFLOAT3& t, const DirectX::XMFLOAT2& uv)
 			: Position(p), Normal(n), TangentU(t), TexC(uv){}
 		Vertex(
 			float px, float py, float pz, 
@@ -33,10 +33,10 @@ public:
 			: Position(px,py,pz), Normal(nx,ny,nz),
 			  TangentU(tx, ty, tz), TexC(u,v){}
 
-		XMFLOAT3 Position;
-		XMFLOAT3 Normal;
-		XMFLOAT3 TangentU;
-		XMFLOAT2 TexC;
+		DirectX::XMFLOAT3 Position;
+		DirectX::XMFLOAT3 Normal;
+		DirectX::XMFLOAT3 TangentU;
+		DirectX::XMFLOAT2 TexC;
 	};
 
 	struct MeshData

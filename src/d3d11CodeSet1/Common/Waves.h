@@ -10,7 +10,7 @@
 #define WAVES_H
 
 #include <Windows.h>
-#include <xnamath.h>
+#include <DirectXMath.h>
 
 class Waves
 {
@@ -26,13 +26,13 @@ public:
 	float Depth()const;
 
 	// Returns the solution at the ith grid point.
-	const XMFLOAT3& operator[](int i)const { return mCurrSolution[i]; }
+	const DirectX::XMFLOAT3& operator[](int i)const { return mCurrSolution[i]; }
 
 	// Returns the solution normal at the ith grid point.
-	const XMFLOAT3& Normal(int i)const { return mNormals[i]; }
+	const DirectX::XMFLOAT3& Normal(int i)const { return mNormals[i]; }
 
 	// Returns the unit tangent vector at the ith grid point in the local x-axis direction.
-	const XMFLOAT3& TangentX(int i)const { return mTangentX[i]; }
+	const DirectX::XMFLOAT3& TangentX(int i)const { return mTangentX[i]; }
 
 	void Init(UINT m, UINT n, float dx, float dt, float speed, float damping);
 	void Update(float dt);
@@ -53,10 +53,10 @@ private:
 	float mTimeStep;
 	float mSpatialStep;
 
-	XMFLOAT3* mPrevSolution;
-	XMFLOAT3* mCurrSolution;
-	XMFLOAT3* mNormals;
-	XMFLOAT3* mTangentX;
+	DirectX::XMFLOAT3* mPrevSolution;
+	DirectX::XMFLOAT3* mCurrSolution;
+	DirectX::XMFLOAT3* mNormals;
+	DirectX::XMFLOAT3* mTangentX;
 };
 
 #endif // WAVES_H
