@@ -10,5 +10,5 @@ The codebase is being updated over time to migrate it over to use DirectX Math i
 
 ## Additional resources
 
-* [DirectXMath Portal](https://docs.microsoft.com/en-us/windows/win32/dxmath/directxmath-portal
+* [DirectXMath Portal](https://docs.microsoft.com/en-us/windows/win32/dxmath/directxmath-portal)
 * [Where is the DirectX SDK?](https://docs.microsoft.com/en-us/windows/win32/directx-sdk--august-2009-)
