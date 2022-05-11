@@ -28,7 +28,8 @@
 //---------------------------------------------------------------------------------------
 // Simple d3d error checker for book demos.
 //---------------------------------------------------------------------------------------
-
+// DXTrace(__FILEW__, (DWORD)__LINE__, hr, L#x, true); has bee removed from this macro.
+// It was part of dxerr, which has since been deprecated.
 #if defined(DEBUG) | defined(_DEBUG)
 	#ifndef HR
 	#define HR(x)                                               \
@@ -36,7 +37,7 @@
 		HRESULT hr = (x);                                       \
 		if(FAILED(hr))                                          \
 		{                                                       \
-			DXTrace(__FILEW__, (DWORD)__LINE__, hr, L#x, true); \
+																\
 		}                                                       \
 	}
 	#endif
