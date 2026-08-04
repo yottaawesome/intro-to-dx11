@@ -23,8 +23,6 @@
 #include "RenderStates.h"
 #include "Waves.h"
 
-using namespace DirectX;
-
 enum RenderOptions
 {
 	Lighting = 0,
@@ -197,16 +195,15 @@ bool BlendApp::Init()
 	InputLayouts::InitAll(md3dDevice);
 	RenderStates::InitAll(md3dDevice);
 
-	ID3D11Resource* texResource = nullptr;
-	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/grass.dds", &texResource, &mGrassMapSRV));
-	ReleaseCOM(texResource); // view saves reference
+	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+		L"Textures/grass.dds", 0, 0, &mGrassMapSRV, 0 ));
 
-	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/water2.dds", &texResource, &mWavesMapSRV));
-	ReleaseCOM(texResource); // view saves reference
+	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+		L"Textures/water2.dds", 0, 0, &mWavesMapSRV, 0 ));
 
-	HR(DirectX::CreateDDSTextureFromFile(md3dDevice, L"Textures/WireFence.dds", &texResource, &mBoxMapSRV));
-	ReleaseCOM(texResource); // view saves reference
-	
+	HR(D3DX11CreateShaderResourceViewFromFile(md3dDevice, 
+		L"Textures/WireFence.dds", 0, 0, &mBoxMapSRV, 0 ));
+
 	BuildLandGeometryBuffers();
 	BuildWaveGeometryBuffers();
 	BuildCrateGeometryBuffers();

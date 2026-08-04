@@ -5,8 +5,6 @@
 #include "GeometryGenerator.h"
 #include "MathHelper.h"
 
-using namespace DirectX;
-
 void GeometryGenerator::CreateBox(float width, float height, float depth, MeshData& meshData)
 {
 	//

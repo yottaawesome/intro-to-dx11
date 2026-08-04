@@ -6,7 +6,6 @@
 #include <algorithm>
 #include <vector>
 #include <cassert>
-using namespace DirectX;
 
 Waves::Waves()
 : mNumRows(0), mNumCols(0), mVertexCount(0), mTriangleCount(0), 

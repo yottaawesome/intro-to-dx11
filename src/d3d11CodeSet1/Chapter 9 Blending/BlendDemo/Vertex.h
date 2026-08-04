@@ -8,14 +8,15 @@
 #define VERTEX_H
 
 #include "d3dUtil.h"
+
 namespace Vertex
 {
 	// Basic 32-byte vertex structure.
 	struct Basic32
 	{
-		DirectX::XMFLOAT3 Pos;
-		DirectX::XMFLOAT3 Normal;
-		DirectX::XMFLOAT2 Tex;
+		XMFLOAT3 Pos;
+		XMFLOAT3 Normal;
+		XMFLOAT2 Tex;
 	};
 }
 
