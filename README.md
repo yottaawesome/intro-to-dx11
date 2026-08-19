@@ -8,6 +8,10 @@ Unofficial source code repo for Frank D. Luna's book [Introduction to 3D Game Pr
 
 The codebase is being updated over time to migrate it over to use DirectX Math instead of the legacy XNA Math. Solutions are also being updated to retarget them to VS2022 and the latest toolset. References to dxerr and other depracated libraries will be gradually removed.
 
+## Revisited source code
+
+I have a separate repo where [I'm modernising the codebase](https://github.com/yottaawesome/intro-to-dx11-revisited) to eliminate the deprecated DX11 framework, updating the toolset to the latest MSVC, migrating to modules for better readability, and applying various other improvements. The revisited codebase is easier to compile due to the elimination of outdated components.
+
 ## Additional resources
 
 * [DirectXMath Portal](https://docs.microsoft.com/en-us/windows/win32/dxmath/directxmath-portal)
